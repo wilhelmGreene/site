@@ -24,7 +24,7 @@ body {
 }
 .mainBackground{
     clear: both;
-    background-image: url('photos/background.jpg');
+    background-image: url('images/background.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
