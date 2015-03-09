@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <link rel="stylesheet" type="text/css" href="style.css">
+	  <title>Автостоп. Головна</title>
+  </head>
+  <body>
+  	<header>
+		<div style="float: left; width:20%; font-size:35px; margin:30px; margin-top:0;">АВТОСТОП</div>
+		<div class="logIn"> 
+			<form action=/sp method="POST">
+					Вхід: 
+					<input style="margin:2px;"type="text"><input style="margin:5px;" type="text"> 	
+					<input type=hidden name="event_source" value="login">
+					<input style="float: right; margin:5px;" type=submit value="Увійти" style="font-fammily: mainFont">
+			</form>
+		</div>
+	</header>
+	<div class="mainBackground">
+		<div class="main"> 
+			<div style="margin:10px; font-size:20px;">Реєстрація</div>
+			<form action=/sp method="POST">
+			<div class="registrationFields">Ім’я: <input style="opacity: 0.8;" type="text"></div>	
+			<div class="registrationFields">Прізвище: <input style="opacity: 0.8;" type="text"></div> 
+			<div class="registrationFields">Логін: <input style="opacity: 0.8;" type="text"></div> 
+			<div class="registrationFields">Пароль: <input style="opacity: 0.8;" type="text"></div> 
+			<div class="registrationFields">E-mail: <input style="opacity: 0.8;" type="text"></div> 
+			<div class="registrationFields">Номер мобільного: <input style="opacity: 0.8;" type="text"></div> 
+				<input type=hidden name="event_source" value="registration">
+				<input  style="font-fammily: mainFont; clear: both; margin:6px" type=submit value="Зареєструватися">
+			</form>
+		</div>
+	</div>
+  </body>
+</html>
