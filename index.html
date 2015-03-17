@@ -5,33 +5,93 @@
   	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>Автостоп. Головна</title>
+	<link rel="icon" href="images/fav.ico" type="image/x-icon">
   </head>
   <body>
-  	<header>
-		<div style="float: left; width:20%; font-size:35px; margin:30px; margin-top:0;">АВТОСТОП</div>
-		<div class="logIn"> 
+  	<div class="nav">
+  		<div class="container">
+  			<ul class="pull-right">
+  				<form class="form-inline">
+					<div class="form-group">
+				    	<input type="text" class="form-control" id="inputLogin" placeholder="Логін">
+					</div>
+				  	<div class="form-group">
+				    	<input type="password" class="form-control" id="inputPassword" placeholder="Пароль">
+				  	</div>
+					<input type=hidden name="event_source" value="logIn">
+					<input class="btn btn-primary" type=submit value="Увійти">
+				</form>
+  			</ul>
+  		</div>
+  	</div>
+
+  	<div class="jumbotron">
+  		<div class="container">
+  			<h1>Автостоп</h1>
+  			<p>електронна система для організації пасажирських міжміських некомерційних перевезень</p>
+  		</div>
+  	</div>
+	<div class="col-md-offset-4 form-registrations">
+		<div class="container"> 
+			<h3 class="col-md-offset-2">Реєстрація</h3>
 			<form action=/sp method="POST">
-					Вхід: 
-					<input style="margin:2px;"type="text"><input style="margin:5px;" type="text"> 	
-					<input type=hidden name="event_source" value="login">
-					<input style="float: right; margin:5px;" type=submit value="Увійти" style="font-fammily: mainFont">
-			</form>
-		</div>
-	</header>
-	<div class="mainBackground">
-		<div class="main"> 
-			<div style="margin:10px; font-size:20px;">Реєстрація</div>
-			<form action=/sp method="POST">
-			<div class="registrationFields">Ім’я: <input style="opacity: 0.8;" type="text"></div>	
-			<div class="registrationFields">Прізвище: <input style="opacity: 0.8;" type="text"></div> 
-			<div class="registrationFields">Логін: <input style="opacity: 0.8;" type="text"></div> 
-			<div class="registrationFields">Пароль: <input style="opacity: 0.8;" type="text"></div> 
-			<div class="registrationFields">E-mail: <input style="opacity: 0.8;" type="text"></div> 
-			<div class="registrationFields">Номер мобільного: <input style="opacity: 0.8;" type="text"></div> 
+				<div class="form-group row">
+   					<label for="inputFirstNameR" class="col-md-1 control-label">Ім’я</label>
+    				<div class="col-md-4">
+      					<input type="name" class="form-control" id="inputFirstNameR" placeholder="Ім’я">
+   					 </div>
+  				</div>
+  				<div class="form-group row">
+   					<label for="inputLastNameR" class="col-md-1 control-label">Прізвище</label>
+    				<div class="col-md-4">
+      					<input type="lastName" class="form-control" id="inputLastNameR" placeholder="Прізвище">
+   					 </div>
+  				</div>
+  				<div class="form-group row">
+   					<label for="inputLoginR" class="col-md-1 control-label">Логін</label>
+    				<div class="col-md-4">
+      					<input type="login" class="form-control" id="inputLoginR" placeholder="Логін">
+   					 </div>
+  				</div>
+  				<div class="form-group row">
+   					<label for="inputPasswordR" class="col-md-1 control-label">Пароль</label>
+    				<div class="col-md-4">
+      					<input type="password" class="form-control" id="inputPasswordR" placeholder="Пароль">
+   					</div>
+  				</div>
+  				<div class="form-group row">
+   					<label for="inputEmailRName" class="col-md-1 control-label">E-mail</label>
+    				<div class="col-md-4">
+      					<input type="email" class="form-control" id="inputEmailR" placeholder="Email">
+   					</div>
+  				</div>
+  				<div class="form-group row">
+   					<label for="inputTelNumberR" class="col-md-1 control-label">Тел.</label>
+    				<div class="col-md-4">
+      					<input type="telNumber" class="form-control" id="inputTelNumberR" placeholder="Номер телефону">
+   					</div>
+  				</div>
+  				<div class="row form-inline col-md-offset-1 driverORpassenger">
+	  				<div class="radio col-md-2">
+						<label>
+							<input type="radio" value="driver">
+					    		Я водій
+						</label>
+					</div>
+					<div class="radio col-md-2">
+						<label>
+					    	<input type="radio" value="passenger">
+					    		Я пасажир
+					  	</label>
+					</div>
+				</div>
 				<input type=hidden name="event_source" value="registration">
-				<input  style="font-fammily: mainFont; clear: both; margin:6px" type=submit value="Зареєструватися">
+				<input class="btn btn-primary col-md-offset-2" type=submit value="Зареєструватися">
 			</form>
 		</div>
+	</div>
+	<div class="theEnd">
+		<p>(c)Зробили ми</p>
 	</div>
   </body>
 </html>
