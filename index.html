@@ -1,97 +1,106 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  	<meta charset="UTF-8">
-  	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<title>Автостоп. Головна</title>
-	<link rel="icon" href="images/fav.ico" type="image/x-icon">
-  </head>
-  <body>
-  	<div class="nav">
-  		<div class="container">
-  			<ul class="pull-right">
-  				<form class="form-inline">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>Автостоп. Головна</title>
+		<link rel="icon" href="images/fav.ico" type="image/x-icon">
+	</head>
+	<body>
+		<div class="nav navbar-fixed-top">
+			<div class="container">
+				<div class="tmpBtns pull-left col-md-5">
+					<ul>
+						<li>тимчасові кнопки</li>
+						<li><a class="btn btn-danger" href="driver/main.html" role="button">Увійти як водій</a></li>
+						<li><a class="btn btn-danger" href="passenger/main.html" role="button">Увійти як пасажир</a></li>
+					</ul>
+				</div>
+				<ul class="pull-right">
+					<form  action=/sp method="GET" class="form-inline">
 					<div class="form-group">
-				    	<input type="text" class="form-control" id="inputLogin" placeholder="Логін">
+							<input type="text" class="form-control" id="inputLogin" placeholder="Логін">
 					</div>
-				  	<div class="form-group">
-				    	<input type="password" class="form-control" id="inputPassword" placeholder="Пароль">
-				  	</div>
+						<div class="form-group">
+							<input type="password" class="form-control" id="inputPassword" placeholder="Пароль">
+						</div>
 					<input type=hidden name="event_source" value="logIn">
 					<input class="btn btn-primary" type=submit value="Увійти">
 				</form>
-  			</ul>
-  		</div>
-  	</div>
+				</ul>
+			</div>
+		</div>
 
-  	<div class="jumbotron">
-  		<div class="container">
-  			<h1>Автостоп</h1>
-  			<p>електронна система для організації пасажирських міжміських некомерційних перевезень</p>
-  		</div>
-  	</div>
+		<div class="jumbotron">
+			<div class="container">
+				<h1>Автостоп</h1>
+				<p>електронна система для організації пасажирських міжміських некомерційних перевезень</p>
+			</div>
+		</div>
+
 	<div class="col-md-offset-4 form-registrations">
 		<div class="container"> 
 			<h3 class="col-md-offset-2">Реєстрація</h3>
-			<form action=/sp method="POST">
+			<form action=/sp method="GET">
 				<div class="form-group row">
-   					<label for="inputFirstNameR" class="col-md-1 control-label">Ім’я</label>
-    				<div class="col-md-4">
-      					<input type="name" class="form-control" id="inputFirstNameR" placeholder="Ім’я">
-   					 </div>
-  				</div>
-  				<div class="form-group row">
-   					<label for="inputLastNameR" class="col-md-1 control-label">Прізвище</label>
-    				<div class="col-md-4">
-      					<input type="lastName" class="form-control" id="inputLastNameR" placeholder="Прізвище">
-   					 </div>
-  				</div>
-  				<div class="form-group row">
-   					<label for="inputLoginR" class="col-md-1 control-label">Логін</label>
-    				<div class="col-md-4">
-      					<input type="login" class="form-control" id="inputLoginR" placeholder="Логін">
-   					 </div>
-  				</div>
-  				<div class="form-group row">
-   					<label for="inputPasswordR" class="col-md-1 control-label">Пароль</label>
-    				<div class="col-md-4">
-      					<input type="password" class="form-control" id="inputPasswordR" placeholder="Пароль">
-   					</div>
-  				</div>
-  				<div class="form-group row">
-   					<label for="inputEmailRName" class="col-md-1 control-label">E-mail</label>
-    				<div class="col-md-4">
-      					<input type="email" class="form-control" id="inputEmailR" placeholder="Email">
-   					</div>
-  				</div>
-  				<div class="form-group row">
-   					<label for="inputTelNumberR" class="col-md-1 control-label">Тел.</label>
-    				<div class="col-md-4">
-      					<input type="telNumber" class="form-control" id="inputTelNumberR" placeholder="Номер телефону">
-   					</div>
-  				</div>
-  				<div class="row form-inline col-md-offset-1 driverORpassenger">
-	  				<div class="radio col-md-2">
+						<label for="inputFirstNameR" class="col-md-1 control-label">Ім’я</label>
+						<div class="col-md-4">
+								<input type="text" class="form-control" id="inputFirstNameR" placeholder="Ім’я">
+						 </div>
+					</div>
+					<div class="form-group row">
+						<label for="inputLastNameR" class="col-md-1 control-label">Прізвище</label>
+						<div class="col-md-4">
+								<input type="text" class="form-control" id="inputLastNameR" placeholder="Прізвище">
+						 </div>
+					</div>
+					<div class="form-group row">
+						<label for="inputLoginR" class="col-md-1 control-label">Логін</label>
+						<div class="col-md-4">
+								<input type="text" class="form-control" id="inputLoginR" placeholder="Логін">
+						 </div>
+					</div>
+					<div class="form-group row">
+						<label for="inputPasswordR" class="col-md-1 control-label">Пароль</label>
+						<div class="col-md-4">
+								<input type="password" class="form-control" id="inputPasswordR" placeholder="Пароль">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="inputEmailRName" class="col-md-1 control-label">E-mail</label>
+						<div class="col-md-4">
+								<input type="email" class="form-control" id="inputEmailR" placeholder="Email">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="inputTelNumberR" class="col-md-1 control-label">Тел.</label>
+						<div class="col-md-4">
+								<input type="tel" class="form-control" id="inputTelNumberR" placeholder="Номер телефону">
+						</div>
+					</div>
+					<div class="row form-inline col-md-offset-1 driverORpassenger">
+						<div class="radio col-md-2">
 						<label>
-							<input type="radio" value="driver">
-					    		Я водій
+							<input type="radio" name = "userType" value="driver">
+									Я водій
 						</label>
 					</div>
 					<div class="radio col-md-2">
 						<label>
-					    	<input type="radio" value="passenger">
-					    		Я пасажир
-					  	</label>
+								<input type="radio" name = "userType" value="passenger">
+									Я пасажир
+							</label>
 					</div>
 				</div>
+ 
 				<input type=hidden name="event_source" value="registration">
 				<input class="btn btn-primary col-md-offset-2" type=submit value="Зареєструватися">
 			</form>
 		</div>
 	</div>
 	<div class="theEnd">
-		<p>(c)Зробили ми</p>
+		<p class="text-center">(c)Зробили ми</p>
 	</div>
-  </body>
+	</body>
 </html>
