@@ -57,6 +57,9 @@ body{
 .form-registrations label{
     padding-top: 6px;
 }
+.form-profile label{
+    padding-top: 6px;
+}
 .theEnd{
     background-color: rgb(170,170,170);
     padding-top: 2px;
@@ -86,3 +89,4 @@ body{
     margin-top: 5px;
     background-color: rgb(255,250,250);
 }
+

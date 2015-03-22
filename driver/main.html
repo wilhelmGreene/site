@@ -15,9 +15,6 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
               <li class="active"><a href="#">Головна</a></li>
-              <li><a href="#">Розмістити пропозицію</a></li>
-              <li><a href="#">Переглянути заявки</a></li>
-              <li><a href="#">Створити повідомлення</a></li>
               <li><a href="profile.html">Профіль</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -26,10 +23,98 @@
           </div>
         </div>
       </nav>
-      <legend><h2>Головна сторінка водія</h2></legend>
+      <legend>
+        <div class="row">
+        <div class="col-md-8"><h3>Мої пропозиції</h3></div>
+        <div class="col-md-4" style="text-align:right;"><h3>[<a data-toggle="modal" data-target="#myModal">нова пропозиція</a>]</h3></div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h2 class="modal-title" id="myModalLabel">Створення нової пропозиції</h2>
+              </div>
+              <form action=/sp method="GET">
+                <div class="modal-body margin-left:5px;"> 
+                    <legend class=" col-md-11"><h4>Інформація про відправку</h4></legend>
+                    <div class="form-group row">
+                      <label for="inputFromOblast" style="text-align:right;" class="col-md-4 control-label"><h5>Область</h5></label>
+                      <div class="row col-md-8">
+                        <input type="text" class="form-control" id="inputFromOblast" placeholder="Область">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="inputFromTown" style="text-align:right;" class="col-md-4 control-label"><h5>Місто</h5></label>
+                      <div class="row col-md-8">
+                        <input type="text" class="form-control" id="inputFromTown" placeholder="Місто">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="inputFromStreet" style="text-align:right;" class="col-md-4 control-label"><h5>Вулиця</h5></label>
+                      <div class="row col-md-8">
+                        <input type="text" class="form-control" id="inputFromStreet" placeholder="Вулиця">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="inputFromBuilding" style="text-align:right;" class="col-md-4 control-label"><h5>Будинок</h5></label>
+                      <div class="row col-md-8">
+                        <input type="text" class="form-control" id="inputFromBuilding" placeholder="Будинок">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="inputFromTimeAndDate" style="text-align:right;" class="col-md-4 control-label"><h5>Дата і час</h5></label>
+                      <div class="row col-md-8">
+                        <input type="text" class="form-control" id="inputFromTimeAndDate" placeholder="Дата і час">
+                      </div>
+                    </div>
+                    <legend class=" col-md-11"><h4>Інформація про приїзд</h4></legend>
+                    <div class="form-group row">
+                      <label for="inputToOblast" style="text-align:right;" class="col-md-4 control-label"><h5>Область</h5></label>
+                      <div class="row col-md-8">
+                        <input type="text" class="form-control" id="inputFromOblast" placeholder="Область">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="inputToTown" style="text-align:right;" class="col-md-4 control-label"><h5>Місто</h5></label>
+                      <div class="row col-md-8">
+                        <input type="text" class="form-control" id="inputFromTown" placeholder="Місто">
+                      </div>
+                    </div>
+                    <legend class=" col-md-11"><h4>Загальна інформація</h4></legend>
+                    <div class="form-group row">
+                      <label for="inputGeneralCar" style="text-align:right;" class="col-md-4 control-label"><h5>Марка і модель авто</h5></label>
+                      <div class="row col-md-8">
+                        <input type="text" class="form-control" id="inputGeneralCar" placeholder="Марка і модель авто">
+                      </div>
+                    </div> 
+                    <div class="form-group row">
+                      <label for="inputGeneralPassengersNumber" style="text-align:right;" class="col-md-4 control-label"><h5>Кількість пасажирів</h5></label>
+                      <div class="row col-md-8">
+                        <input type="text" class="form-control" id="inputGeneralPassengersNumber" placeholder="Кількість пасажирів">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="inputGeneralFeatures" style="text-align:right;" class="col-md-4 control-label"><h5>Особливості</h5></label>
+                      <div class="row col-md-8">
+                        <textarea class="form-control" rows="3" id="inputGeneralFeatures"> </textarea>
+                      </div>
+                    </div>       
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">вихід</button>
+                  <input type=hidden name="event_source" value="profileChanges">
+                  <input class="btn btn-primary" type=submit value="зберегти зміни">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      </legend>
       <div class="info">
         <div class="container">
-          Можливості для водія
+          <legend><h3>Можливості для водія</h3></legend>
             <ul>
               <li>Розміщати пропозиції</li>
               <li>Приймати/відхиляти заяви пасажира</li>
@@ -44,5 +129,8 @@
   	<div class="theEnd col-md-8 col-md-offset-2">
   		<p class="text-center">(c)Зробили ми</p>
   	</div>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
   </body>
 </html>
