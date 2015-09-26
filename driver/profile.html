@@ -15,62 +15,67 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
               <li><a href="main.html">Головна</a></li>
+              <li><a href="wishes.html">Заявки</a></li>
               <li class="active"><a href="#">Профіль</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="../index.html">Вихід</a></li>
+              <li><a>%username</a></li>
+              <li><form class="navbar-form navbar-left" role="logOut">
+                  <button type="submit" class="btn btn-default">Вихід</button>
+                </form></li>
             </ul>
           </div>
         </div>
       </nav>
-      <legend><h2>Профіль водія</h2></legend>
-      <div>
-      <div class="form-profile">
-        <div class="container"> 
+      <legend>
+        <div class="row">
+          <div class="col-md-8"><h3>Профіль водія</h3></div>
+        </div>
+      </legend> 
+      <div class="profile form-profile col-md-5">
           <form action=/sp method="GET">
-            <div class="form-group row">
-                <label for="inputFirstNameR" class="col-md-1 control-label">Ім’я</label>
-                <div class="col-md-4">
-                    <p class="form-control-static">тут ім'я нашого користувача</p>
-                 </div>
+              <div class="form-group row">
+                <label for="inputLoginR" class="col-md-3 control-label">Логін</label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" id="inputLoginR" placeholder="Логін" onFocus="this.form.submit.disabled=0">
+                </div>
+
               </div>
               <div class="form-group row">
-                <label for="inputLastNameR" class="col-md-1 control-label">Прізвище</label>
-                <div class="col-md-4">
-                    <p class="form-control-static">тут прізвище нашого користувача</p>
-                 </div>
-              </div>
-              <div class="form-group row">
-                <label for="inputLoginR" class="col-md-1 control-label">Логін</label>
-                <div class="col-md-4">
-                    <input type="text" class="form-control" id="inputLoginR" placeholder="Логін">
-                 </div>
-              </div>
-              <div class="form-group row">
-                <label for="inputPasswordR" class="col-md-1 control-label">Пароль</label>
-                <div class="col-md-4">
-                    <input type="password" class="form-control" id="inputPasswordR" placeholder="Пароль">
+                <label for="inputPasswordR" class="col-md-3 control-label">Пароль</label>
+                <div class="col-md-8">
+                    <input type="password" class="form-control" id="inputPasswordR" placeholder="Пароль" onFocus="this.form.submit.disabled=0">
                 </div>
               </div>
               <div class="form-group row">
-                <label for="inputEmailRName" class="col-md-1 control-label">E-mail</label>
-                <div class="col-md-4">
-                    <input type="email" class="form-control" id="inputEmailR" placeholder="Email">
+                <label for="inputEmailR" class="col-md-3 control-label">E-mail</label>
+                <div class="col-md-8">
+                    <input type="email" class="form-control" id="inputEmailR" placeholder="Email" onFocus="this.form.submit.disabled=0">
                 </div>
               </div>
               <div class="form-group row">
-                <label for="inputTelNumberR" class="col-md-1 control-label">Тел.</label>
-                <div class="col-md-4">
-                    <input type="tel" class="form-control" id="inputTelNumberR" placeholder="Номер телефону">
+                <label for="inputTelNumberR" class="col-md-3 control-label">Тел.</label>
+                <div class="col-md-8">
+                    <input type="tel" class="form-control" id="inputTelNumberR" placeholder="Номер телефону" onFocus="this.form.submit.disabled=0">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputTelNumberR" class="col-md-3 control-label">Авто</label>
+                <div class="col-md-8">
+                    <input type="car" class="form-control" id="inputCarR" placeholder="Авто" onFocus="this.form.submit.disabled=0">
                 </div>
               </div>
             <input type=hidden name="event_source" value="profileChanges">
-            <input class="btn btn-primary col-md-offset-2" type=submit value="зберегти зміни">
+            <input class="btn btn-primary col-md-offset-3 profile-btns" 
+            type=submit name="submit" value="зберегти зміни" disabled>
+            <legend class="profile-legend"></legend>
+            <input type=hidden name="event_source" value="deleteAccount">
+            <input class="btn btn-danger col-md-offset-3 profile-btns" 
+              type=submit name="submit1" value="видалити аккаунт">
           </form>
         </div>
-      </div>  
     </div>
-    </div>
+    <div style="margin:20px;"></div>
     <div class="theEnd col-md-8 col-md-offset-2">
       <p class="text-center">(c)Зробили ми</p>
     </div>

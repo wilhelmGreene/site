@@ -13,13 +13,14 @@ body{
     height:100%;
     margin-top: 0;
     margin-bottom: -2.5em;
-    background-color:rgba(255,255,255,0.9); 
+    background-color:rgba(255,255,255,0.7); 
 }
 .userPage{
     background-image: url('images/background.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-attachment:fixed;
 }
 .nav{
     background-color:rgba(255,255,255,0.6);
@@ -79,14 +80,99 @@ body{
     padding-left: 0px;
     color:#F7F9EC;
 }
-.info{
+/*.info{
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: rgba(54,104,161,0.9);
     color:#F7F9EC;
+    height: 100px;
+    display: block;
+    width:100px;
+
 }
+.info .container{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgba(54,104,161,0.9);
+    color:#F7F9EC;
+    height: 100px;
+    display: block;
+    width:100px;
+}*/
 .navbar-default{
     margin-top: 5px;
     background-color: rgb(255,250,250);
 }
-
+.hide-show{
+    display: none;
+    visibility:hidden;
+}
+#saveChanges{
+    visibility: hidden;
+}
+.offer{
+    border-color: rgb(255,255,255);
+    border-width: 5px;
+    border-style: solid;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(54,104,161);
+    color:#F7F9EC;
+    margin-bottom: 5px;
+}
+.wish{
+    background-color: rgb(255,28,141);
+    color:#F7F9EC;
+    height:50px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+.wish .btn{
+    margin:4px;
+}
+.acceptedWish{
+    height:50px;
+}
+.wishBox{
+   overflow-y: scroll;
+   height:344px;
+   border-color: rgb(255,255,255);
+    border-width: 5px;
+    border-style: solid; 
+}
+.wishBox2{
+   overflow-y: scroll;
+   height:378px;
+   border-color: rgb(255,255,255);
+    border-width: 5px;
+    border-style: solid; 
+}
+.generalBox{
+    margin-top: 15px;
+}
+.mainWishOffer{
+    margin-bottom: 50px;
+}
+.profile-btns{
+    margin-top:5px;
+    width: 150px;
+}
+.profile{
+    background-color: rgba(255,255,255,0.7);
+    padding: 10px;
+}
+.profile-legend{
+    margin-top: 5px;
+    padding: 1px;
+    border-width: 3px;
+}
+.realWish{
+    border-color: rgb(255,255,255);
+    border-width: 5px;
+    border-style: solid;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(54,104,161);
+    color:#F7F9EC;
+    margin-bottom: 5px;
+}

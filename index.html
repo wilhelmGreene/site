@@ -10,13 +10,13 @@
 	<body>
 		<div class="nav navbar-fixed-top">
 			<div class="container">
-				<div class="tmpBtns pull-left col-md-5">
+				<!--<div class="tmpBtns pull-left col-md-5">
 					<ul>
 						<li>тимчасові кнопки</li>
 						<li><a class="btn btn-danger" href="driver/main.html" role="button">Увійти як водій</a></li>
 						<li><a class="btn btn-danger" href="passenger/main.html" role="button">Увійти як пасажир</a></li>
 					</ul>
-				</div>
+				</div>-->
 				<ul class="pull-right">
 					<form  action=/sp method="GET" class="form-inline">
 					<div class="form-group">
@@ -43,18 +43,20 @@
 		<div class="container"> 
 			<h3 class="col-md-offset-2">Реєстрація</h3>
 			<form action=/sp method="GET">
-				<div class="form-group row">
-						<label for="inputFirstNameR" class="col-md-1 control-label">Ім’я</label>
-						<div class="col-md-4">
-								<input type="text" class="form-control" id="inputFirstNameR" placeholder="Ім’я">
-						 </div>
-					</div>
-					<div class="form-group row">
-						<label for="inputLastNameR" class="col-md-1 control-label">Прізвище</label>
-						<div class="col-md-4">
-								<input type="text" class="form-control" id="inputLastNameR" placeholder="Прізвище">
-						 </div>
-					</div>
+					<div class="row form-inline col-md-offset-1 driverORpassenger">
+						<div class="radio col-md-2">
+						<label>
+							<input type="radio" name="userType" value="driver" onclick="show()">
+									Я водій
+						</label>
+						</div>
+						<div class="radio col-md-3">
+							<label>
+									<input type="radio" name = "userType" value="passenger" onclick="hide()">
+										Я пасажир
+							</label>
+						</div>
+					</div>	
 					<div class="form-group row">
 						<label for="inputLoginR" class="col-md-1 control-label">Логін</label>
 						<div class="col-md-4">
@@ -68,7 +70,7 @@
 						</div>
 					</div>
 					<div class="form-group row">
-						<label for="inputEmailRName" class="col-md-1 control-label">E-mail</label>
+						<label for="inputEmailR" class="col-md-1 control-label">E-mail</label>
 						<div class="col-md-4">
 								<input type="email" class="form-control" id="inputEmailR" placeholder="Email">
 						</div>
@@ -79,20 +81,14 @@
 								<input type="tel" class="form-control" id="inputTelNumberR" placeholder="Номер телефону">
 						</div>
 					</div>
-					<div class="row form-inline col-md-offset-1 driverORpassenger">
-						<div class="radio col-md-2">
-						<label>
-							<input type="radio" name = "userType" value="driver">
-									Я водій
-						</label>
+					<div id="hide-show" class="form-group row">
+						<label for="inputCarR" class="col-md-1 control-label">Авто</label>
+						<div class="col-md-4">
+								<input type="tel" class="form-control" id="inputCarR" placeholder="Авто">
+						</div>
 					</div>
-					<div class="radio col-md-2">
-						<label>
-								<input type="radio" name = "userType" value="passenger">
-									Я пасажир
-							</label>
-					</div>
-				</div>
+					
+				
  
 				<input type=hidden name="event_source" value="registration">
 				<input class="btn btn-primary col-md-offset-2" type=submit value="Зареєструватися">
@@ -102,5 +98,6 @@
 	<div class="theEnd">
 		<p class="text-center">(c)Зробили ми</p>
 	</div>
+	<script src="js/script.js"></script>
 	</body>
 </html>

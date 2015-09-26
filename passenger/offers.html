@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="../style.css">
-		<title>Водій. Головна</title>
+		<title>Пасажир. Пропозиції</title>
 		<link rel="icon" href="../images/fav.ico" type="image/x-icon">
 	</head>
 	<body class="userPage">
@@ -14,87 +14,24 @@
 					<a class="navbar-header navbar-brand">АВТОСТОП</a>
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="#">Головна</a></li>
-							<li><a href="wishes.html">Заявки</a></li>
+							<li><a href="main.html">Головна</a></li>
+							<li class="active"><a href="#">Пропозиції</a></li>
 							<li><a href="profile.html">Профіль</a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li><a>%username</a></li>
 							<li><form class="navbar-form navbar-left" role="logOut">
 								  <button type="submit" class="btn btn-default">Вихід</button>
-								</form></li>
+								</form>
+							</li>
 						</ul>
 					</div>
 				</div>
 			</nav>
 			<legend>
 				<div class="row">
-				<div class="col-md-8"><h3>Мої пропозиції</h3></div>
-				<div class="col-md-4" style="text-align:right;"><h3>[<a data-toggle="modal" data-target="#myModal">нова пропозиція</a>]</h3></div>
-				<!-- Modal -->
-				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-								<h2 class="modal-title" id="myModalLabel">Створення нової пропозиції</h2>
-							</div>
-							<form action=/sp method="GET">
-								<div class="modal-body margin-left:5px;"> 
-										<div class="form-group row">
-											<label for="inputOfferCar" style="text-align:right;" class="col-md-4 control-label"><h5>Car</h5></label>
-											<div class="row col-md-8">
-												<input type="text" class="form-control" id="inputOfferCar" placeholder="тачила">
-											</div>
-										</div>
-											<div class="form-group row">
-											<label for="inputOfferPassenger_count" style="text-align:right;" class="col-md-4 control-label"><h5>К-сть пасажирів</h5></label>
-											<div class="row col-md-8">
-												<input type="text" class="form-control" id="inputOfferPassenger_count" placeholder="кількість людей">
-											</div>
-										</div>
-										<div class="form-group row">
-											<label for="inputOfferStatr" style="text-align:right;" class="col-md-4 control-label"><h5>Звідки</h5></label>
-											<div class="row col-md-8">
-												<input type="text" class="form-control" id="inputOfferStatr" placeholder="Звідки">
-											</div>
-										</div>
-										<div class="form-group row">
-											<label for="inputOfferFinish" style="text-align:right;" class="col-md-4 control-label"><h5>Куди</h5></label>
-											<div class="row col-md-8">
-												<input type="text" class="form-control" id="inputOfferFinish" placeholder="куди їдемо">
-											</div>
-										</div>
-										<div class="form-group row">
-											<label for="inputOfferStart_time" style="text-align:right;" class="col-md-4 control-label"><h5>Час</h5></label>
-											<div class="row col-md-8">
-												<input type="text" class="form-control" id="inputOfferStart_time" placeholder="Час">
-											</div>
-										</div>
-										<div class="form-group row">
-											<label for="inputOfferDescription" style="text-align:right;" class="col-md-4 control-label"><h5>Опис</h5></label>
-											<div class="row col-md-8">
-												<input type="text" class="form-control" id="inputOfferDescription" placeholder="Опис">
-											</div>
-										</div>
-										<div class="form-group row">
-											<label for="inputOfferTitle" style="text-align:right;" class="col-md-4 control-label"><h5>Title</h5></label>
-											<div class="row col-md-8">
-												<input type="text" class="form-control" id="inputOfferTitle" placeholder="тайтл">
-											</div>
-										</div>
-				     
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-default" data-dismiss="modal">вихід</button>
-									<input type=hidden name="event_source" value="profileChanges">
-									<input class="btn btn-primary" type=submit value="зберегти зміни">
-								</div>
-							</form>
-						</div>
-					</div>
+					<div class="col-md-8"><h3>Пропозиції</h3></div>
 				</div>
-			</div>
 			</legend>
 			<div class="mainWishOffer">
 				<!--Приклад пропозиції-->
@@ -137,9 +74,11 @@
 									<p class="form-control-static">якийсь тайтл, хз для чого</p>
 								</div>
 							</div>
+							<input type=hidden name="event_source" value="profileChanges">
+							<input class="btn btn-default col-md-offset-5" type=submit value="подати заявку">
 						</form>
 					</div>
-					<div class="wishBox">
+					<div class="wishBox2">
 						<legend>Я їду!</legend>
 						<!--First11111 WISH --> 
 						<div class="acceptedWish">
@@ -176,8 +115,6 @@
 										<p class="form-control-static">Наташа</p>
 									</div>
 								</div>
-								<input type=hidden name="event_source" value="profileChanges">
-								<input class="btn btn-primary col-md-4" type=submit value="прийняти">
 							</form>
 						</div>
 						<!--END Second WISH -->
@@ -190,8 +127,6 @@
 										<p class="form-control-static">Коля</p>
 									</div>
 								</div>
-								<input type=hidden name="event_source" value="profileChanges">
-								<input class="btn btn-primary col-md-4 col-md-offset-1" type=submit value="прийняти">
 							</form>
 						</div>
 						<!--END Third WISH -->
@@ -204,8 +139,6 @@
 										<p class="form-control-static">Вася</p>
 									</div>
 								</div>
-								<input type=hidden name="event_source" value="profileChanges">
-								<input class="btn btn-primary col-md-4 col-md-offset-1" type=submit value="прийняти">
 							</form>
 						</div>
 						<!--END Fourth WISH -->
@@ -218,8 +151,6 @@
 										<p class="form-control-static">Маруся</p>
 									</div>
 								</div>
-								<input type=hidden name="event_source" value="profileChanges">
-								<input class="btn btn-primary col-md-4 col-md-offset-1" type=submit value="прийняти">
 							</form>
 						</div>
 						<!--END Fifth WISH -->
@@ -266,9 +197,11 @@
 									<p class="form-control-static">якийсь тайтл, хз для чого</p>
 								</div>
 							</div>
+							<input type=hidden name="event_source" value="profileChanges">
+							<input class="btn btn-default col-md-offset-5" type=submit value="подати заявку">
 						</form>
 					</div>
-					<div class="wishBox">
+					<div class="wishBox2">
 						<legend>Я їду!</legend>
 						<!--First11111 WISH --> 
 						<div class="acceptedWish">
@@ -305,8 +238,6 @@
 										<p class="form-control-static">Наташа</p>
 									</div>
 								</div>
-								<input type=hidden name="event_source" value="profileChanges">
-								<input class="btn btn-primary col-md-4" type=submit value="прийняти">
 							</form>
 						</div>
 						<!--END Second WISH -->
@@ -353,9 +284,11 @@
 									<p class="form-control-static">якийсь тайтл, хз для чого</p>
 								</div>
 							</div>
+							<input type=hidden name="event_source" value="profileChanges">
+							<input class="btn btn-default col-md-offset-5" type=submit value="подати заявку">
 						</form>
 					</div>
-					<div class="wishBox">
+					<div class="wishBox2">
 						<legend>Я їду!</legend>
 						<!--First11111 WISH --> 
 						<div class="acceptedWish">
@@ -380,8 +313,6 @@
 										<p class="form-control-static">Наташа</p>
 									</div>
 								</div>
-								<input type=hidden name="event_source" value="profileChanges">
-								<input class="btn btn-primary col-md-4" type=submit value="прийняти">
 							</form>
 						</div>
 						<!--END Second WISH -->
@@ -394,8 +325,6 @@
 										<p class="form-control-static">Коля</p>
 									</div>
 								</div>
-								<input type=hidden name="event_source" value="profileChanges">
-								<input class="btn btn-primary col-md-4 col-md-offset-1" type=submit value="прийняти">
 							</form>
 						</div>
 						<!--END Third WISH -->
@@ -408,22 +337,18 @@
 										<p class="form-control-static">Вася</p>
 									</div>
 								</div>
-								<input type=hidden name="event_source" value="profileChanges">
-								<input class="btn btn-primary col-md-4 col-md-offset-1" type=submit value="прийняти">
 							</form>
 						</div>
 						<!--END Fourth WISH -->
 					</div>
 				</div>		
 				<!--Кінець прикладу-->
-				
 			</div>
 		</div>
 		<div style="margin:20px;"></div>
 		<div class="theEnd col-md-8 col-md-offset-2">
 			<p class="text-center">(c)Зробили ми</p>
 		</div>
-
 		<script src="../js/jquery.min.js"></script>
 		<script src="../js/bootstrap.js"></script>
 	</body>

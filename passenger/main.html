@@ -1,47 +1,424 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  	<meta charset="UTF-8">
-  	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-	  <link rel="stylesheet" type="text/css" href="../style.css">
-    <title>Пасажир. Головна</title>
-    <link rel="icon" href="../images/fav.ico" type="image/x-icon">
-  </head>
-  <body class="userPage">
-    <div class="page col-md-8 col-md-offset-2">
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <a class="navbar-header navbar-brand">АВТОСТОП</a>
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Головна</a></li>
-              <li><a href="#">Створити повідомлення</a></li>
-              <li><a href="profile.html">Профіль</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="../index.html">Вихід</a></li>
-            </ul>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="../style.css">
+		<title>Пасажир. Головна</title>
+		<link rel="icon" href="../images/fav.ico" type="image/x-icon">
+	</head>
+	<body class="userPage">
+		<div class="page col-md-8 col-md-offset-2">  
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<a class="navbar-header navbar-brand">АВТОСТОП</a>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#">Головна</a></li>
+							<li><a href="offers.html">Пропозиції</a></li>
+							<li><a href="profile.html">Профіль</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li><a>%username</a></li>
+							<li><form class="navbar-form navbar-left" role="logOut">
+                  <button type="submit" class="btn btn-default">Вихід</button>
+                </form></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<legend>
+				<div class="row">
+				<div class="col-md-8"><h3>Мої заяви</h3></div>
+				<div class="col-md-4" style="text-align:right;"><h3>[<a data-toggle="modal" data-target="#myModal">нова заява</a>]</h3></div>
+				<!-- Modal -->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h2 class="modal-title" id="myModalLabel">Створення нової заяви</h2>
+							</div>
+							<form action=/sp method="GET">
+								<div class="modal-body margin-left:5px;"> 
+										<div class="form-group row">
+											<label for="inputWishStart" style="text-align:right;" class="col-md-4 control-label"><h5>Start</h5></label>
+											<div class="row col-md-8">
+												<input type="text" class="form-control" id="inputWishStart" placeholder="звідки">
+											</div>
+										</div>
+											<div class="form-group row">
+											<label for="inputWishTarget" style="text-align:right;" class="col-md-4 control-label"><h5>Target</h5></label>
+											<div class="row col-md-8">
+												<input type="text" class="form-control" id="inputWishTarget" placeholder="куди">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="inputWishStartTime" style="text-align:right;" class="col-md-4 control-label"><h5>Час</h5></label>
+											<div class="row col-md-8">
+												<input type="text" class="form-control" id="inputWishStartTime" placeholder="час">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="inputOfferDescription" style="text-align:right;" class="col-md-4 control-label"><h5>Опис</h5></label>
+											<div class="row col-md-8">
+												<input type="text" class="form-control" id="inputOfferDescription" placeholder="Опис">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="inputOfferTitle" style="text-align:right;" class="col-md-4 control-label"><h5>Title</h5></label>
+											<div class="row col-md-8">
+												<input type="text" class="form-control" id="inputOfferTitle" placeholder="тайтл">
+											</div>
+										</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">вихід</button>
+									<input type=hidden name="event_source" value="newWish">
+									<input class="btn btn-primary" type=submit value="зберегти зміни">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			</legend>
+			<div class="mainWishOffer">
+        <!--Приклад заяви-->
+        <div class="generalBox">
+          <div class="realWish col-md-6">
+            <form class="form-horizontal col-md-10">
+              <div class="form-group">
+                <label class="col-sm-5 control-label">Start</label>
+                <div class="col-sm-7">
+                  <p class="form-control-static">Ужград</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-5 control-label">Targer</label>
+                <div class="col-sm-7">
+                  <p class="form-control-static">Луцик</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-5 control-label">Start Time</label>
+                <div class="col-sm-7">
+                  <p class="form-control-static">5 ранку</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-5 control-label">Description</label>
+                <div class="col-sm-7">
+                  <p class="form-control-static">я з собою кота візьму</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-5 control-label">title</label>
+                <div class="col-sm-7">
+                  <p class="form-control-static">ну знову тайтли</p>
+                </div>
+              </div>
+            </form>
           </div>
-        </div>
-      </nav>
-      <legend><h2>Головна сторінка пасажира</h2></legend>
-      <div>
-        <div class="info">
-          <div class="container">
-            Можливості для пасажира
-            <ul>
-              <li>Розміщати заяви до пропозицій водіїв</li>
-              <li>Переглядати інформацію про водія</li>
-              <li>Писати відгуки про водія</li>
-              <li>Надсилати особисті повідомлення</li>
-              <li>Переглядати/редагувати власний аккаунт</li>
-            </ul>
+        </div>    
+        <!--Кінець прикладу-->
+        <!--Приклад заяви-->
+        <div class="generalBox">
+          <div class="realWish col-md-6">
+            <form class="form-horizontal col-md-10">
+              <div class="form-group">
+                <label class="col-sm-5 control-label">Start</label>
+                <div class="col-sm-7">
+                  <p class="form-control-static">Ужград</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-5 control-label">Targer</label>
+                <div class="col-sm-7">
+                  <p class="form-control-static">Луцик</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-5 control-label">Start Time</label>
+                <div class="col-sm-7">
+                  <p class="form-control-static">5 ранку</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-5 control-label">Description</label>
+                <div class="col-sm-7">
+                  <p class="form-control-static">я з собою кота візьму</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-5 control-label">title</label>
+                <div class="col-sm-7">
+                  <p class="form-control-static">ну знову тайтли</p>
+                </div>
+              </div>
+            </form>
           </div>
+        </div>    
+        <!--Кінець прикладу-->
+        <!--Приклад заяви-->
+        <div class="generalBox">
+          <div class="realWish col-md-6">
+            <form class="form-horizontal col-md-10">
+              <div class="form-group">
+                <label class="col-sm-5 control-label">Start</label>
+                <div class="col-sm-7">
+                  <p class="form-control-static">Ужград</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-5 control-label">Targer</label>
+                <div class="col-sm-7">
+                  <p class="form-control-static">Луцик</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-5 control-label">Start Time</label>
+                <div class="col-sm-7">
+                  <p class="form-control-static">5 ранку</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-5 control-label">Description</label>
+                <div class="col-sm-7">
+                  <p class="form-control-static">я з собою кота візьму</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-5 control-label">title</label>
+                <div class="col-sm-7">
+                  <p class="form-control-static">ну знову тайтли</p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>  
+        <!--Кінець прикладу-->
+			</div>
+      <legend>
+        <div class="row">
+          <div class="col-md-8"><h3>Пропозиції в яких я беру участь</h3></div>
         </div>
+      </legend>
+      <div class="mainWishOffer">
+        <!--Приклад пропозиції-->
+        <div class="generalBox">
+          <div class="offer col-md-7">
+            <form class="form-horizontal col-md-10">
+              <div class="form-group">
+                <label class="col-sm-5 control-label">Car</label>
+                <div class="col-sm-7">
+                  <p class="form-control-static">Прірора</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-5 control-label">Passenger_count</label>
+                <div class="col-sm-7">
+                  <p class="form-control-static">3</p>
+                </div>
+              </div>
+                <div class="form-group">
+                <label class="col-sm-5 control-label">Start</label>
+                <div class="col-sm-7">
+                  <p class="form-control-static">Кийов</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-5 control-label">Finish</label>
+                <div class="col-sm-7">
+                  <p class="form-control-static">Льовов</p>
+                </div>
+              </div>
+                <div class="form-group">
+                <label class="col-sm-5 control-label">Description</label>
+                <div class="col-sm-7">
+                  <p class="form-control-static">я гей</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-5 control-label">Title</label>
+                <div class="col-sm-7">
+                  <p class="form-control-static">якийсь тайтл, хз для чого</p>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="wishBox">
+            <legend>Я їду!</legend>
+            <!--First11111 WISH --> 
+            <div class="acceptedWish">
+              <form class="form-horizontal col-md-10">
+                <div class="form-group">
+                  <label class="col-sm-5 control-label">Мене звуть</label>
+                  <div class="col-sm-5">
+                    <p class="form-control-static">Міша</p>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!--END First111111 WISH -->
+            <!--First222222 WISH --> 
+            <div class="acceptedWish">
+              <form class="form-horizontal col-md-10">
+                <div class="form-group">
+                  <label class="col-sm-5 control-label">Мене звуть</label>
+                  <div class="col-sm-5">
+                    <p class="form-control-static">Оля</p>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!--END First2222222 WISH -->
+            <!-------------------------------------------->
+            <legend>Я хочу їхати.</legend>
+            <!--Second WISH --> 
+            <div class="wish">
+              <form class="form-horizontal col-md-12 row">
+                <div class="form-group col-md-8 ">
+                  <label class="col-md-4 control-label">name:</label>
+                  <div class="col-md-8">
+                    <p class="form-control-static">Наташа</p>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!--END Second WISH -->
+            <!--Third WISH --> 
+            <div class="wish">
+              <form class="form-horizontal col-md-12 row">
+                <div class="form-group col-md-8 col-md-offset-2">
+                  <label class="col-md-4 control-label">name:</label>
+                  <div class="col-md-8">
+                    <p class="form-control-static">Коля</p>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!--END Third WISH -->
+            <!--Fourth WISH --> 
+            <div class="wish">
+              <form class="form-horizontal col-md-12 row">
+                <div class="form-group col-md-8 col-md-offset-2">
+                  <label class="col-md-4 control-label">name:</label>
+                  <div class="col-md-8">
+                    <p class="form-control-static">Вася</p>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!--END Fourth WISH -->
+            <!--Fifth WISH --> 
+            <div class="wish">
+              <form class="form-horizontal col-md-12 row">
+                <div class="form-group col-md-8 col-md-offset-2">
+                  <label class="col-md-4 control-label">name:</label>
+                  <div class="col-md-8">
+                    <p class="form-control-static">Маруся</p>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!--END Fifth WISH -->
+          </div>
+        </div>    
+        <!--Кінець прикладу-->
+        <!--Приклад пропозиції-->
+        <div class="generalBox">
+          <div class="offer col-md-7">
+            <form class="form-horizontal col-md-10">
+              <div class="form-group">
+                <label class="col-sm-5 control-label">Car</label>
+                <div class="col-sm-7">
+                  <p class="form-control-static">Прірора</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-5 control-label">Passenger_count</label>
+                <div class="col-sm-7">
+                  <p class="form-control-static">3</p>
+                </div>
+              </div>
+                <div class="form-group">
+                <label class="col-sm-5 control-label">Start</label>
+                <div class="col-sm-7">
+                  <p class="form-control-static">Кийов</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-5 control-label">Finish</label>
+                <div class="col-sm-7">
+                  <p class="form-control-static">Льовов</p>
+                </div>
+              </div>
+                <div class="form-group">
+                <label class="col-sm-5 control-label">Description</label>
+                <div class="col-sm-7">
+                  <p class="form-control-static">я гей</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-5 control-label">Title</label>
+                <div class="col-sm-7">
+                  <p class="form-control-static">якийсь тайтл, хз для чого</p>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="wishBox">
+            <legend>Я їду!</legend>
+            <!--First11111 WISH --> 
+            <div class="acceptedWish">
+              <form class="form-horizontal col-md-10">
+                <div class="form-group">
+                  <label class="col-sm-5 control-label">Мене звуть</label>
+                  <div class="col-sm-5">
+                    <p class="form-control-static">Міша</p>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!--END First111111 WISH -->
+            <!--First222222 WISH --> 
+            <div class="acceptedWish">
+              <form class="form-horizontal col-md-10">
+                <div class="form-group">
+                  <label class="col-sm-5 control-label">Мене звуть</label>
+                  <div class="col-sm-5">
+                    <p class="form-control-static">Оля</p>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!--END First2222222 WISH -->
+            <!-------------------------------------------->
+            <legend>Я хочу їхати.</legend>
+            <!--Second WISH --> 
+            <div class="wish">
+              <form class="form-horizontal col-md-12 row">
+                <div class="form-group col-md-8 ">
+                  <label class="col-md-4 control-label">name:</label>
+                  <div class="col-md-8">
+                    <p class="form-control-static">Наташа</p>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!--END Second WISH -->
+          </div>
+        </div>    
+        <!--Кінець прикладу-->
       </div>
-    </div>
-  	<div class="theEnd col-md-8 col-md-offset-2">
-  		<p class="text-center">(c)Зробили ми</p>
-  	</div>
-  </body>
+		</div>
+		<div style="margin:20px;"></div>
+		<div class="theEnd col-md-8 col-md-offset-2">
+			<p class="text-center">(c)Зробили ми</p>
+		</div>
+
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/bootstrap.js"></script>
+	</body>
 </html>
